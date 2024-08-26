@@ -9,7 +9,7 @@ public class moodAnalysis {
 	
 	
 	
-	public String mood() {
+	public String mood() throws MoodAnalyzerException {
 		
 		try {
 		if(msg.contains("Sad")) {
@@ -18,15 +18,9 @@ public class moodAnalysis {
 			return "HAPPY";
 		}
 		}catch(NullPointerException ex) {
-			System.out.println("Enter valid mood ");
-			//System.out.println(ex);
-			
-			return "HAPPY";
-		}
-		
-		//return "";
+			//System.out.println("Enter valid mood ");
+			throw new MoodAnalyzerException("Enter Invalid Mood, this mood is improper");
+			 
+		}	
 	}
-
-	
-
 }
