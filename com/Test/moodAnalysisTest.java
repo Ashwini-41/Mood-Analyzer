@@ -12,7 +12,7 @@ class moodAnalysisTest {
 	@Test
 	void test() {
 		moodAnalysis obj = new moodAnalysis();
-		String ans = obj.mood("I am in sad mood");
+		String ans = obj.mood("I am in Sad mood");
 		assertEquals("Sad",ans);
 		
 	}
