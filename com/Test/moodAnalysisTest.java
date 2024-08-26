@@ -19,10 +19,18 @@ class moodAnalysisTest {
 	
 	@Test
 	void moodTest() {
-		moodAnalysis obj = new moodAnalysis("I am in any mood");
+		moodAnalysis obj = new moodAnalysis("I am in Happy mood");
 		String res = obj.mood();
 		assertEquals("HAPPY",res);
 		
+	}
+	
+	@Test 
+	void moodNullTest() {
+		
+		moodAnalysis obj = new moodAnalysis(null);
+		String res = obj.mood();
+		assertEquals("HAPPY",res);	
 	}
 
 }
