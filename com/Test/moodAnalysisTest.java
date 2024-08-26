@@ -11,17 +11,17 @@ class moodAnalysisTest {
 
 	@Test
 	void test() {
-		moodAnalysis obj = new moodAnalysis();
-		String ans = obj.mood("I am in Sad mood");
-		assertEquals("Sad",ans);
+		moodAnalysis obj = new moodAnalysis("I am in Sad mood");
+		String ans = obj.mood();
+		assertEquals("SAD",ans);
 		
 	}
 	
 	@Test
 	void moodTest() {
-		moodAnalysis obj = new moodAnalysis();
-		String res = obj.mood("I am in happy mood");
-		assertEquals("Happy",res);
+		moodAnalysis obj = new moodAnalysis("I am in any mood");
+		String res = obj.mood();
+		assertEquals("HAPPY",res);
 		
 	}
 
